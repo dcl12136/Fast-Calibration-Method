@@ -4,7 +4,7 @@ Description:
 This package contains the MATLAB implementation of the proposed "Linear Model-based Binary Search Autofocusing Strategy" (Algorithm 1 in the manuscript).
 
 Files Included:
-1. LinearModel.m
+1. Linear.m
    - The core function for Linear Model Initialization (Line 3 in Algorithm 1).
    - Analytically reconstructs the initial complex object.
 
@@ -24,13 +24,13 @@ These functions are designed as modular components. Users can reconstruct the wo
     
     % Step 1: Initialization
     % Use LinearModelePIE3 to get the initial object estimate
-    [Obj_Init, ~] = LinearModelePIE3(N, Obj_Mov, delta_L0, Dect_Std);
+    [Obj_Init, ~] = Linear(N, Obj_Mov, delta_L0, Dect_Std);
 
     % Step 2: Autofocusing Loop
     % Feed Obj_Init into the iterative loop
     while not_converged
         % Update Object
-        [Obj_Updated, ...] = Ptychography_1(..., Obj_Init, ...);
+        [Obj_Updated, ...] = Ptychography(..., Obj_Init, ...);
         
         % Update Distance (Sharpness check & Binary search)
         [new_dist, ...] = dPIE(Obj_Updated, current_dist, ...);
