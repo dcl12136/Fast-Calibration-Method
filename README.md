@@ -11,7 +11,7 @@ Files Included:
 2. dPIE.m
    - The function for sharpness evaluation and axial distance update (Lines 6-13 in Algorithm 1).
 
-3. Ptychography_1.m
+3. Ptychography.m
    - Standard iterative update engine (ePIE) (Line 18 in Algorithm 1).
 
 4. Propagate.m
