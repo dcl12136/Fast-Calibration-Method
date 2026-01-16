@@ -23,7 +23,7 @@ These functions are designed as modular components. Users can reconstruct the wo
     % --- Pseudo-code for Integration ---
     
     % Step 1: Initialization
-    % Use LinearModelePIE3 to get the initial object estimate
+    % Use Linear to get the initial object estimate
     [Obj_Init, ~] = Linear(N, Obj_Mov, delta_L0, Dect_Std);
 
     % Step 2: Autofocusing Loop
